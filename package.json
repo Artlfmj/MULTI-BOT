@@ -1,0 +1,26 @@
+{
+  "name": "multi-bot",
+  "version": "0.0.1",
+  "description": "BETA BOT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artlfmj/MULTI-BOT.git"
+  },
+  "keywords": [
+    "multi",
+    "artlfmj"
+  ],
+  "author": "Artlfmj",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Artlfmj/MULTI-BOT/issues"
+  },
+  "homepage": "https://github.com/Artlfmj/MULTI-BOT#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
