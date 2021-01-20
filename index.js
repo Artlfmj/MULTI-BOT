@@ -6,9 +6,8 @@ const client = new Discord.Client()
 client.once('ready', () => {
     console.log('Pret!');
     console.log(`Connecté en tant que ${client.user.tag}!`);
-    console.log(`%c ________________________________________
-    < mooooooooooooooooooooooooooooooooooooo >
-     ----------------------------------------
+    console.log(`%c __________________________________________________________________________
+
      __  ___      ____  _       ____        __     ____        ___            __
      /  |/  /_  __/ / /_(_)     / __ )____  / /_   / __ \____  / (_)___  ___  / /
     / /|_/ / / / / / __/ /_____/ __  / __ \/ __/  / / / / __ \/ / / __ \/ _ \/ / 
@@ -22,9 +21,9 @@ client.once('ready', () => {
   ]
     
   setInterval(function(){
-      let status = statuses[Math.random() * statuses.length]
-      client.user.setActivity{status , }
-      ]
+      let status = statuses[Math.floor(Math.random() * statuses.length)]
+      client.user.setActivity( status, {type: "WATCHING"}); 
+      
   })
 });
 
