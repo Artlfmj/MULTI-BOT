@@ -1,7 +1,25 @@
 const Discord = require("discord.js")
 const config = require("./config.json")
+const fs = require('fs')
 
 const client = new Discord.Client()
+
+client.commands = new Discord.Collection();
+
+fs.readdir('./cmds/', (err, files) => {
+    if(err) console.log(err)
+    let jsfile = files.filter(f => f.split('.').pop() === 'js')
+    if(jsfile.length <= 0) {
+        console.log('[HANDLER]: Aucune commande trouvée')
+
+    }
+
+    jsfile.forEach((f, i) => {
+    let props = require(`./cmds/${f}`);
+    console.log(`[HANDLER]: ${f} ok!`)
+    client.commands.set(props.config.name, props)
+    })
+})
 
 client.once('ready', () => {
     console.log('Pret!');
@@ -37,36 +55,9 @@ client.on("message", async message =>{
     let command = messageArray[0];
     let args = messageArray.slice(1);
 
-    ///Commande User-info
-    if(message.content.startsWith((config.Prefix) +`userinfo`) ){
+    let commandFile = client.commands.get(command.slice(config.Prefix.length))
+    if(commandFile) commandFile.run(client, message, args)
 
-        let UserEmbed = new Discord.MessageEmbed()
-        .setAuthor(message.author.tag)
-        .setThumbnail(message.author.displayAvatarURL({dynamic: true, size: 512}))
-        .addField(`Nom de l'utilisateur`, (message.author.username))
-        .addField(`Tag`, message.author.tag)
-        .addField(`Id`, message.author.id)
-        .addField(`Statut`, message.author.presence.status)
-        .addField(`Compte crée le`, message.author.createdAt)
-        .setFooter('Demandé par ' + message.author.username)
-
-        message.channel.send(UserEmbed)
-    }
-
-    /// Commande ServerInfo
-    if(message.content.startsWith((config.Prefix) +`serverinfo`) ){
-
-        let ServerEmbed = new Discord.MessageEmbed()
-        .setAuthor(message.guild.name)
-        .setThumbnail(message.guild.iconURL({dynamic: true, size: 512}))
-        .addField(`Nom du serveur`, (message.guild.name))
-        .addField(`Propriétaire`, message.guild.owner)
-        .addField(`Nombre de membres`, message.guild.memberCount)
-        .addField(`Nombre de roles`, message.guild.roles.cache.size)
-        .setFooter('Demandé par ' + message.author.username)
-
-        message.channel.send(ServerEmbed)
-    }
 });
 
 client.login(config.Token)
