@@ -38,18 +38,4 @@ client.on("message", async message =>{
     let args = messageArray.slice(1);
 })
 
-client.on('message', message => {
-    if (message.content.startsWith(`statut`)) {
-        message.channel.send(` #######  ##    ## ##       #### ##    ## ######## 
-        ##     ## ###   ## ##        ##  ###   ## ##       
-        ##     ## ####  ## ##        ##  ####  ## ##       
-        ##     ## ## ## ## ##        ##  ## ## ## ######   
-        ##     ## ##  #### ##        ##  ##  #### ##       
-        ##     ## ##   ### ##        ##  ##   ### ##       
-         #######  ##    ## ######## #### ##    ## ######## `, "font-family:monospace")
-    }
-
-});
-
 client.login(config.Token)
-
