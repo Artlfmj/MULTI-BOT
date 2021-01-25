@@ -22,6 +22,8 @@
   "homepage": "https://github.com/Artlfmj/MULTI-BOT#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "fs": "0.0.1-security"
+    "domain-check": "^1.0.5",
+    "fs": "0.0.1-security",
+    "githubby": "^1.0.0-d"
   }
 }
