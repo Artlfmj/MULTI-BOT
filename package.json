@@ -24,6 +24,7 @@
     "discord.js": "^12.5.1",
     "domain-check": "^1.0.5",
     "fs": "0.0.1-security",
-    "githubby": "^1.0.0-d"
+    "githubby": "^1.0.0-d",
+    "ms": "^2.1.3"
   }
 }

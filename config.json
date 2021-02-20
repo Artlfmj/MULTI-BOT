@@ -1,4 +1,16 @@
 {
-    "Token" : "NzEwMTYxODI5MjgzODg5MTUy.Xrwbvg.3wlKNhugPJZc03EIQegKpxK54JM" ,
-    "Prefix" : "!"
+    "Token" : "NzEwMTYxODI5MjgzODg5MTUy.Xrwbvg.jtsLheeqIwosCiGlKKiFLhMA4fc" ,
+    "Prefix" : "!",
+
+
+    "login": { 
+        "type": "Premium",
+        "date": "Life",
+        "key": "v9qx",
+        "token": "NzEwMTYxODI5MjgzODg5MTUy.Xrwbvg.jtsLheeqIwosCiGlKKiFLhMA4fc"
+    },
+    "bot": { 
+        "owner": "750063798676619315",
+         "version": "Beta (v2.3)"
+    }
 }
