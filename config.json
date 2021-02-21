@@ -1,16 +1,5 @@
 {
     "Token" : "NzEwMTYxODI5MjgzODg5MTUy.Xrwbvg.jtsLheeqIwosCiGlKKiFLhMA4fc" ,
     "Prefix" : "!",
-
-
-    "login": { 
-        "type": "Premium",
-        "date": "Life",
-        "key": "v9qx",
-        "token": "NzEwMTYxODI5MjgzODg5MTUy.Xrwbvg.jtsLheeqIwosCiGlKKiFLhMA4fc"
-    },
-    "bot": { 
-        "owner": "750063798676619315",
-         "version": "Beta (v2.3)"
-    }
+    "owners_id": ["444454206800396309", "337028800929857536", "316063819824627712", "475230849239875584"]
 }
