@@ -6,7 +6,7 @@ module.exports.run = async(client,message,args) => {
     .setURL("")
     .setImage(client.user.avatarURL)
     .setColor("RANDOM")
-    
+    message.channel.send(Invite)
 }
 
 module.exports.config = {
