@@ -13,12 +13,12 @@ module.exports.run = async (bot, message, args) => {
     var uptime = new Discord.MessageEmbed()
 
 
-    .setTitle(`<:online:734458973016817714> Uptime | ${bot.user.username} `)
+    .setTitle(`⚡ Uptime | ${bot.user.username} `)
     .addField("Je suis en ligne depuis ", ` ${duration(bot.uptime)}`)
     .setFooter(`${bot.user.tag}`, bot.user.displayAvatarURL)
     .setColor("RANDOM")
     message.channel.send(uptime)
-    console.log(`utilisation de la commande uptime par ${message.guild.members.cache.get(message.author.id).displayName}`, message.guild.id)
+    
 }
 module.exports.config = {
     name: "uptime"
