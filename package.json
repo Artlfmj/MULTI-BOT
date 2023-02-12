@@ -22,7 +22,7 @@
   "homepage": "https://github.com/Artlfmj/MULTI-BOT#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "distube": "^2.8.10",
+    "distube": "^4.0.4",
     "domain-check": "^1.0.5",
     "fs": "0.0.1-security",
     "githubby": "^1.0.0-d",
